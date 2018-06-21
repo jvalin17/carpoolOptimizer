@@ -20,7 +20,7 @@
 
 #### Algorithm:
 
-###### 1.It follows concept of queue that is FIFO. A passenger that enters car first is dropped first.  
+###### 1.It follows concept of queue that is FIFO. A passenger that enters car first is dropped first. 
 ###### 2.Tries to fit more requester in minimum cars mainly based on reusability. Assigns car to incoming requester from previously used cars.  
 
 ##### Object:  
@@ -52,9 +52,9 @@
 	
 
 ##### Algorithm Pseudo Code:
-read data -> data frame && sort users by ‘Depart After’ and ‘Arrive Before’ 
+   read data -> data frame && sort users by ‘Depart After’ and ‘Arrive Before’ 
 
-For each request -> table: 
+   For each request -> table: 
 	x,y -> location of ride requester 
 	If any active cars  
 
