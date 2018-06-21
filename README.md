@@ -52,35 +52,35 @@
 	
 
 ##### Algorithm Pseudo Code:
-   read data -> data frame && sort users by ‘Depart After’ and ‘Arrive Before’ 
+   	read data -> data frame && sort users by ‘Depart After’ and ‘Arrive Before’ 
 
-   For each request -> table: 
-	x,y -> location of ride requester 
-	If any active cars  
+   	For each request -> table: 
+		x,y -> location of ride requester 
+		If any active cars  
 
-		If time of car to drop last passenger < current requester time 
-			Car <- drop all passengers 
-			Update records  
-	
-			Calculate time (Car <- new Request) 
-			If time to pick up and drop requester < drop time limit for requester 
-				Assign Car <- Requester 
-					Picked_up <- True 
-	
-	If not picked_up 
+			If time of car to drop last passenger < current requester time 
+				Car <- drop all passengers 
+				Update records  
 
-		Try to find nearest car from all active cars 
-			If there are passengers in car 
-				It checks if all passengers can reach on time or not by adding Requester 
+				Calculate time (Car <- new Request) 
+				If time to pick up and drop requester < drop time limit for requester 
+					Assign Car <- Requester 
+						Picked_up <- True 
 
-				If all passengers can reach on time 
-					Cars time, location <- Requester Pick Up Time, Location 
-					Update all passengers drop timings 
-					Requester is added to car 
-					Assign Car -> Requester 
-					Picked_up -> True 	
-	
-	If not picked up 
-		Assign new car to requester 
+		If not picked_up 
+
+			Try to find nearest car from all active cars 
+				If there are passengers in car 
+					It checks if all passengers can reach on time or not by adding Requester 
+
+					If all passengers can reach on time 
+						Cars time, location <- Requester Pick Up Time, Location 
+						Update all passengers drop timings 
+						Requester is added to car 
+						Assign Car -> Requester 
+						Picked_up -> True 	
+
+		If not picked up 
+			Assign new car to requester 
 
 
